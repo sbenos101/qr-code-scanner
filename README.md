@@ -1,2 +1,2 @@
 # qr-code-scanner
-Custom JavaScript, CSS &amp; HTML to support the C&amp;W Berry 2025 Trade Show
+Custom QR Code Scanner designed to run solely off browser support for mobile devices to support the C&W Berry 2025 Trade Show. Coded in JavaScript, CSS &amp; and HTML.
