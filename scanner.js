@@ -54,7 +54,7 @@
             scannedSuppliers.push({ timestamp: new Date().toLocaleString(), supplier: decodedText });
             updateTableAndStorage();
 
-            if (scanCount === 5) {
+            if (scanCount % 5 === 0 && scanCount <= 25) {
                 showModal();
             }
         }
