@@ -6,7 +6,7 @@
 #qr-reader { width: 100%; }
 .trade-show-svg > svg { margin: 10px auto 20px; width: 40%; }
 table { width: 100%; border-collapse: collapse; margin-top: 5px; }
-th, td { padding: 10px; text-align: left; border-bottom: 2px solid #009845; }
+th, td { padding: 10px; text-align: center; border-bottom: 2px solid #009845; }
 th:nth-child(2) { text-align: center; }
 td:nth-child(2) { text-align: center; }
 .page-header, .top-container, .breadcrumbs, .page-footer { display: none; }
@@ -14,5 +14,20 @@ td:nth-child(2) { text-align: center; }
 .ts-modal-content { background-color: #fff; padding: 40px 20px 50px; border: 1px solid #888; width: 80%; text-align: center; display: flex; flex-direction: column; align-items: center; position: relative; border-radius: 10px; }
 .ts-close { color: #aaa; font-size: 28px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px; }
 hr { width: 100%; border: 0; height: 2px; background-color: #009845; margin: 20px 0; }
+.green-hr { display: block; width: calc(100% - 120px); height: 2px; margin: 0 auto; border: none; background: linear-gradient(to right, #fff, #009844, #fff); mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent); }
+.ts-brand-header { display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.ts-brand-header h2 { font-size: 20px!important; font-weight: 700!important; margin: 0; margin-right: 10px; }
+.ts-chevron { transition: transform 0.3s ease; }
+.ts-brand-scroll-wrapper { opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0s 0.3s, height 0.3s ease; background: #fff; overflow-x: hidden; position: relative; mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent); height: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; }
+.ts-brand-scroll-wrapper.open { opacity: 1; visibility: visible; height: 80px; transition: opacity 0.3s ease, height 0.3s ease; }
+.ts-brand-scroll { display: flex; align-items: center; justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; height: 100%; }
+.ts-brand-scroll::-webkit-scrollbar { display: none; }
+.ts-brand-scroll img { flex: 0 0 auto; width: auto; max-height: 60px; object-fit: contain; scroll-snap-align: start; padding: 0 0 0 15px; max-height: 60px; transition: none; }
+.ts-brand-scroll-wrapper .scroll-buttons { display: none!important; }
+.ts-brand-scroll-wrapper .scroll-buttons.open { display: flex!important; justify-content: center; }
+.tuesday-scroll-buttons,.wednesday-scroll-buttons, .thursday-scroll-buttons { display: none!important; }
+.tuesday-scroll-buttons.open, .wednesday-scroll-buttons.open, .thursday-scroll-buttons.open { display: flex!important; justify-content: center; }
+.scroll-arrow { background: none; border: none; cursor: pointer; padding: 0; }
+
 
 </style>
